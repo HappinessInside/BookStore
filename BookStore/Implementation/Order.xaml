@@ -1,0 +1,103 @@
+﻿<Window x:Class="Implementation.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Implementation"
+        mc:Ignorable="d"
+        Title="Order" Icon="Icon.png" ResizeMode="NoResize" Height="570" Width="792">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="BackgroundWithBook" Source="Book.jpg" HorizontalAlignment="Center" Height="560" VerticalAlignment="Top" Width="817" Margin="1,0,-32,-18" Grid.RowSpan="2"></Image>
+        <Label x:Name="label" Content="Order" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="DarkRed" Margin="348,-2,362,0" Height="34" Width="76"/>
+        <TextBox x:Name="rangeOfBookstore" HorizontalScrollBarVisibility="Visible" IsReadOnly="True" HorizontalAlignment="Left" Height="147" VerticalAlignment="Top" Width="402" Margin="374,56,0,0" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" VerticalScrollBarVisibility="Visible" />
+        <Label x:Name="label1" Content="Range of books for reference:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="488,25,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="16" Height="31" Width="229"/>
+        <TextBox x:Name="surnameOfTheCuctomer" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap"  VerticalAlignment="Top" Width="337" Margin="23,51,0,0"/>
+        <Label x:Name="label2" Content="Surname of the customer:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,25,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="16" Height="31" Width="202"/>
+        <TextBox x:Name="phoneNumber" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Margin="23,106,0,0"/>
+        <Label x:Name="label3" Content="Customer's phone number:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.247,4.154" Margin="23,81,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="16" Height="31" Width="210"/>
+        <Label x:Name="label4" Content="Customer's email adress:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" Margin="23,139,0,0" FontSize="16" Height="31" Width="196"/>
+        <TextBox x:Name="emailAdress" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" Margin="23,170,0,0"/>
+        <Label x:Name="label5" Content="Ordered books:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" Margin="348,208,0,0" FontSize="18" Height="31" Width="143"/>
+        <TextBox x:Name="author0" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Margin="9,261,0,0"/>
+        <Label x:Name="label6" Content="Author" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,233,0,0" FontWeight="Bold" FontStyle="Italic" RenderTransformOrigin="0.388,0.423" FontSize="16" Height="31" Width="62"/>
+        <Label x:Name="label7" Content="Name of the book or the word ''new''" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,233,0,0" FontWeight="Bold" FontStyle="Italic" FontSize="16" Height="31" Width="289"/>
+        <TextBox x:Name="name0" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="242,261,0,0"/>
+        <Label x:Name="label8" Content="Number of copies" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="623,233,0,0" RenderTransformOrigin="6.848,10.154" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
+        <ComboBox x:Name="numberOfCopies0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="634,261,0,0" Height="25">
+            <TextBlock>1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+            <TextBlock>4</TextBlock>
+            <TextBlock>5</TextBlock>
+            <TextBlock>6</TextBlock>
+            <TextBlock>7</TextBlock>
+            <TextBlock>8</TextBlock>
+            <TextBlock>9</TextBlock>
+            <TextBlock>10</TextBlock>
+        </ComboBox>
+        <Button x:Name="addTheBookButton" Content="Add the book" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="611,452,0,0" Height="31" FontWeight="Bold" FontStyle="Italic" FontSize="16" Click="AddTheBook_Click"/>
+        <Button x:Name="placeTheOrder" Click="PlaceTheOrder_Click" Content="Place the order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="611,488,0,0" Height="31" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
+        <TextBox x:Name="author1" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Margin="9,300,0,0"/>
+        <TextBox x:Name="author2" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Margin="10,343,0,0"/>
+        <TextBox x:Name="author3" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Margin="9,383,0,0"/>
+        <TextBox x:Name="author4" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Margin="10,422,0,0"/>
+        <TextBox x:Name="name1" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="242,300,0,0"/>
+        <TextBox x:Name="name2" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="242,343,0,0"/>
+        <TextBox x:Name="name3" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="242,383,0,0"/>
+        <TextBox x:Name="name4" Visibility="Hidden" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="242,422,0,0"/>
+        <ComboBox x:Name="numberOfCopies1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="634,300,0,0" Height="25">
+            <TextBlock><Run Text="1"/></TextBlock>
+            <TextBlock><Run Text="2"/></TextBlock>
+            <TextBlock><Run Text="3"/></TextBlock>
+            <TextBlock><Run Text="4"/></TextBlock>
+            <TextBlock><Run Text="5"/></TextBlock>
+            <TextBlock><Run Text="6"/></TextBlock>
+            <TextBlock><Run Text="7"/></TextBlock>
+            <TextBlock><Run Text="8"/></TextBlock>
+            <TextBlock><Run Text="9"/></TextBlock>
+            <TextBlock><Run Text="10"/></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="numberOfCopies2" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="634,343,0,0" Height="25">
+            <TextBlock><Run Text="1"/></TextBlock>
+            <TextBlock><Run Text="2"/></TextBlock>
+            <TextBlock><Run Text="3"/></TextBlock>
+            <TextBlock><Run Text="4"/></TextBlock>
+            <TextBlock><Run Text="5"/></TextBlock>
+            <TextBlock><Run Text="6"/></TextBlock>
+            <TextBlock><Run Text="7"/></TextBlock>
+            <TextBlock><Run Text="8"/></TextBlock>
+            <TextBlock><Run Text="9"/></TextBlock>
+            <TextBlock><Run Text="10"/></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="numberOfCopies3" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="634,383,0,0" Height="25">
+            <TextBlock><Run Text="1"/></TextBlock>
+            <TextBlock><Run Text="2"/></TextBlock>
+            <TextBlock><Run Text="3"/></TextBlock>
+            <TextBlock><Run Text="4"/></TextBlock>
+            <TextBlock><Run Text="5"/></TextBlock>
+            <TextBlock><Run Text="6"/></TextBlock>
+            <TextBlock><Run Text="7"/></TextBlock>
+            <TextBlock><Run Text="8"/></TextBlock>
+            <TextBlock><Run Text="9"/></TextBlock>
+            <TextBlock><Run Text="10"/></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="numberOfCopies4" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="634,422,0,0" Height="25">
+            <TextBlock><Run Text="1"/></TextBlock>
+            <TextBlock><Run Text="2"/></TextBlock>
+            <TextBlock><Run Text="3"/></TextBlock>
+            <TextBlock><Run Text="4"/></TextBlock>
+            <TextBlock><Run Text="5"/></TextBlock>
+            <TextBlock><Run Text="6"/></TextBlock>
+            <TextBlock><Run Text="7"/></TextBlock>
+            <TextBlock><Run Text="8"/></TextBlock>
+            <TextBlock><Run Text="9"/></TextBlock>
+            <TextBlock><Run Text="10"/></TextBlock>
+        </ComboBox>
+
+
+    </Grid>
+</Window>

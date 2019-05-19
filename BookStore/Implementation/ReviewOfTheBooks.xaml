@@ -1,0 +1,15 @@
+﻿<Window x:Class="Implementation.ReviewOfTheBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Implementation"
+        mc:Ignorable="d"
+        Title="ReviewOfTheBooks" Icon="Icon.png" ResizeMode="NoResize" Height="570" Width="792">
+    <Grid>
+        <Image x:Name="BackgroundWithBook" Source="Book.jpg" HorizontalAlignment="Center" Height="560" VerticalAlignment="Top" Width="817" Margin="1,0,-32,-18" Grid.RowSpan="2"></Image>
+        <Label x:Name="reviewOfOrdersLabel" Content="Review of the orders" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="DarkRed" Margin="286,0,292,0" Height="34" Width="208"/>
+        <TextBox x:Name="reviewOfOrders" Text="Currently, there are no outstanding orders."  VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="451" TextWrapping="Wrap" VerticalAlignment="Top" Width="718" Margin="36,58,0,0" FontSize="16"/>
+        <Label x:Name="reviewOfTheRequests" Visibility="Hidden" Content="Review of outstanding requests." HorizontalAlignment="Center" Foreground="DarkRed" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="20" Margin="240,8,220.6,0" Width="325"/>
+    </Grid>
+</Window>
